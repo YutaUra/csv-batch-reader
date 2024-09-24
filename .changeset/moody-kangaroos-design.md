@@ -1,5 +1,5 @@
 ---
-"csv-batch-reader": patch
+"@yutaura/csv-batch-reader": patch
 ---
 
 initial package
