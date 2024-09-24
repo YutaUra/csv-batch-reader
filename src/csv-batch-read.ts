@@ -8,7 +8,12 @@ export const csvBatchRead = async <
   filePath: string,
   batchSize: number,
   handleHeader: (header: (keyof T)[]) => unknown,
-  handleBatch: (rows: T[], batchCount: number, isLastChunk: boolean, header: (keyof T)[]) => unknown,
+  handleBatch: (
+    rows: T[],
+    batchCount: number,
+    isLastChunk: boolean,
+    header: (keyof T)[],
+  ) => unknown,
 ) => {
   return await new Promise<void>((resolve, reject) => {
     const stream = createReadStream(filePath).pipe(
@@ -20,12 +25,10 @@ export const csvBatchRead = async <
     let isFirstChunk = true;
     const { promise: headerPromise, resolve: resolveHeaders } =
       promiseWithResolvers<(keyof T)[]>();
-    const headerResolved = headerPromise.then(async (headers) =>
-      {
-        await handleHeader(headers)
-        return headers
-      },
-    );
+    const headerResolved = headerPromise.then(async (headers) => {
+      await handleHeader(headers);
+      return headers;
+    });
     const shouldResolve: unknown[] = [headerResolved];
 
     stream.on("data", (chunk: T) => {
