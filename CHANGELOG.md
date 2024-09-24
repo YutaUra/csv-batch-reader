@@ -1,5 +1,11 @@
 # @yutaura/csv-batch-reader
 
+## 1.1.0
+
+### Minor Changes
+
+- 336fcac: add header to batch callback
+
 ## 1.0.0
 
 ### Major Changes
