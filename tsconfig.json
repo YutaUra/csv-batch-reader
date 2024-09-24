@@ -1,0 +1,10 @@
+{
+  "extends": "@tsconfig/strictest/tsconfig.json",
+  "compilerOptions": {
+    "emitDeclarationOnly": true,
+    "declarationMap": true,
+    "declaration": true,
+    "outDir": "dist"
+  },
+  "include": ["src"]
+}
