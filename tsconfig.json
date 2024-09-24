@@ -4,7 +4,10 @@
     "emitDeclarationOnly": true,
     "declarationMap": true,
     "declaration": true,
-    "outDir": "dist"
+    "outDir": "dist",
+    "types": ["vitest/globals"],
+    "module": "Preserve",
+    "target": "ESNext"
   },
   "include": ["src"]
 }

@@ -7,6 +7,7 @@
   "scripts": {
     "build": "tsup",
     "check": "tsc --noEmit && biome check --fix",
+    "test": "vitest run",
     "publish-packages": "pnpm run build && changeset version && changeset publish"
   },
   "types": "dist/index.d.ts",
@@ -17,12 +18,17 @@
   "author": "YutaUra",
   "license": "MIT",
   "packageManager": "pnpm@9.10.0",
+  "dependencies": {
+    "papaparse": "5.4.1"
+  },
   "devDependencies": {
     "@biomejs/biome": "1.9.2",
     "@changesets/cli": "2.27.8",
     "@tsconfig/strictest": "2.0.5",
     "@types/node": "22.6.1",
+    "@types/papaparse": "5.3.14",
     "tsup": "8.3.0",
-    "typescript": "5.6.2"
+    "typescript": "5.6.2",
+    "vitest": "2.1.1"
   }
 }

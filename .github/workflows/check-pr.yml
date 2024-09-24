@@ -31,6 +31,7 @@ jobs:
 
       - run: pnpm install
       - run: pnpm run check
+      - run: pnpm run test
 
       - uses: int128/update-generated-files-action@d01a193ae8a14d7d7699981665a0922bde444389 # v2.52.0
         if: always()
