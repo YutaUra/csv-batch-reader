@@ -6,8 +6,8 @@
   },
   "scripts": {
     "build": "tsup",
-    "check": "tsc --noEmit && biome check",
-    "prepublish": "pnpm run build"
+    "check": "tsc --noEmit && biome check --fix",
+    "publish-packages": "pnpm run build && changeset version && changeset publish"
   },
   "types": "dist/index.d.ts",
   "main": "dist/index.js",

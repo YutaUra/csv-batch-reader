@@ -1,0 +1,5 @@
+* @YutaUra
+# for renovate automerge
+.changeset
+pnpm-lock.yaml
+package.json
