@@ -1,29 +1,24 @@
 {
-  "name": "csv-batch-reader",
-  "version": "0.0.0",
+  "name": "@yutaura/csv-batch-reader",
+  "version": "0.0.0-1",
   "publishConfig": {
     "access": "public"
   },
   "scripts": {
-    "build": "tsup"
+    "build": "tsup",
+    "check": "tsc --noEmit && biome check",
+    "prepublish": "pnpm run build"
   },
-  "exports": {
-    "types": "./dist/index.d.ts",
-    "import": "./dist/index.mjs",
-    "require": "./dist/index.js"
-  },
-  "files": [
-    "dist",
-    "src",
-    "README.md"
-  ],
-  "keywords": [
-    "csv"
-  ],
+  "types": "dist/index.d.ts",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "files": ["dist", "src", "README.md"],
+  "keywords": ["csv"],
   "author": "YutaUra",
   "license": "MIT",
   "packageManager": "pnpm@9.10.0",
   "devDependencies": {
+    "@biomejs/biome": "1.9.2",
     "@changesets/cli": "2.27.8",
     "@microsoft/api-extractor": "7.47.9",
     "@tsconfig/strictest": "2.0.5",
