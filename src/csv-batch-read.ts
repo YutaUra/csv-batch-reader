@@ -8,7 +8,7 @@ export const csvBatchRead = async <
   filePath: string,
   batchSize: number,
   handleHeader: (header: (keyof T)[]) => unknown,
-  handleBatch: (rows: T[], batchCount: number, isLastChunk: boolean) => unknown,
+  handleBatch: (rows: T[], batchCount: number, isLastChunk: boolean, header: (keyof T)[]) => unknown,
 ) => {
   return await new Promise<void>((resolve, reject) => {
     const stream = createReadStream(filePath).pipe(
@@ -20,8 +20,11 @@ export const csvBatchRead = async <
     let isFirstChunk = true;
     const { promise: headerPromise, resolve: resolveHeaders } =
       promiseWithResolvers<(keyof T)[]>();
-    const headerResolved = headerPromise.then((headers) =>
-      handleHeader(headers),
+    const headerResolved = headerPromise.then(async (headers) =>
+      {
+        await handleHeader(headers)
+        return headers
+      },
     );
     const shouldResolve: unknown[] = [headerResolved];
 
@@ -34,8 +37,8 @@ export const csvBatchRead = async <
         const currentBatchCount = batchCount;
         const currentBuf = buf.slice();
         shouldResolve.push(
-          headerResolved.then(() =>
-            handleBatch(currentBuf, currentBatchCount, false),
+          headerResolved.then((headers) =>
+            handleBatch(currentBuf, currentBatchCount, false, headers),
           ),
         );
         buf = [];
@@ -48,8 +51,8 @@ export const csvBatchRead = async <
       const currentBatchCount = batchCount;
       const currentBuf = buf.slice();
       shouldResolve.push(
-        headerResolved.then(() =>
-          handleBatch(currentBuf, currentBatchCount, true),
+        headerResolved.then((headers) =>
+          handleBatch(currentBuf, currentBatchCount, true, headers),
         ),
       );
 
