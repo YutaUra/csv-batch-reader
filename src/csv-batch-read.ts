@@ -1,4 +1,6 @@
 import { createReadStream } from "node:fs";
+import { PassThrough } from "node:stream";
+import { finished } from "node:stream/promises";
 import Papa from "papaparse";
 import { promiseWithResolvers } from "./promise-with-resolvers.js";
 
@@ -9,7 +11,7 @@ export const csvBatchRead = async <
   batchSize: number,
   handleHeader: (header: (keyof T)[]) => unknown,
   handleBatch: (
-    rows: T[],
+    rows: PassThrough,
     batchCount: number,
     isLastChunk: boolean,
     header: (keyof T)[],
@@ -20,7 +22,8 @@ export const csvBatchRead = async <
       Papa.parse(Papa.NODE_STREAM_INPUT, { header: true }),
     );
 
-    let buf: T[] = [];
+    let currentStream = new PassThrough({ objectMode: true });
+    let currentStreamCount = 0;
     let batchCount = 0;
     let isFirstChunk = true;
     const { promise: headerPromise, resolve: resolveHeaders } =
@@ -36,28 +39,28 @@ export const csvBatchRead = async <
         resolveHeaders(Object.keys(chunk));
         isFirstChunk = false;
       }
-      if (buf.length === batchSize) {
-        const currentBatchCount = batchCount;
-        const currentBuf = buf.slice();
-        shouldResolve.push(
-          headerResolved.then((headers) =>
-            handleBatch(currentBuf, currentBatchCount, false, headers),
-          ),
-        );
-        buf = [];
+      if (currentStreamCount === batchSize) {
+        shouldResolve.push(finished(currentStream.end()));
+        currentStream = new PassThrough({ objectMode: true });
+        currentStreamCount = 0;
         batchCount++;
       }
-      buf.push(chunk);
+      if (currentStreamCount === 0) {
+        const stream = currentStream;
+        const currentBatchCount = batchCount;
+        shouldResolve.push(
+          headerResolved.then((headers) =>
+            handleBatch(stream, currentBatchCount, false, headers),
+          ),
+        );
+      }
+      currentStream.push(chunk);
+      currentStreamCount++;
     });
 
     stream.on("end", () => {
-      const currentBatchCount = batchCount;
-      const currentBuf = buf.slice();
-      shouldResolve.push(
-        headerResolved.then((headers) =>
-          handleBatch(currentBuf, currentBatchCount, true, headers),
-        ),
-      );
+      console.log("stream end");
+      currentStream.end();
 
       Promise.all(shouldResolve)
         .then(() => {

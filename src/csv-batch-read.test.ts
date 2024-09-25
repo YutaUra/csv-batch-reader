@@ -57,8 +57,8 @@ describe("csvBatchRead", () => {
       TEST_CSV_FILE,
       3,
       () => {},
-      (r) => {
-        rows.push(r);
+      async (stream) => {
+        rows.push(await stream.toArray());
       },
     );
     // then
@@ -89,8 +89,8 @@ describe("csvBatchRead", () => {
       TEST_CSV_FILE,
       1,
       () => {},
-      (r) => {
-        rows.push(r);
+      async (r) => {
+        rows.push(await r.toArray());
       },
     );
     // then
@@ -115,8 +115,8 @@ describe("csvBatchRead", () => {
       TEST_CSV_FILE,
       9,
       () => {},
-      (r) => {
-        rows.push(r);
+      async (r) => {
+        rows.push(await r.toArray());
       },
     );
     // then
@@ -143,8 +143,8 @@ describe("csvBatchRead", () => {
       TEST_CSV_FILE,
       1000,
       () => {},
-      (r) => {
-        rows.push(r);
+      async (r) => {
+        rows.push(await r.toArray());
       },
     );
     // then
@@ -175,7 +175,8 @@ describe("csvBatchRead", () => {
         await setTimeout(500);
         headerResolvedAt = performance.now();
       },
-      () => {
+      async (stream) => {
+        await stream.toArray();
         rowsResolvedAt.push(performance.now());
       },
     );
@@ -193,7 +194,8 @@ describe("csvBatchRead", () => {
       TEST_CSV_FILE,
       3,
       () => {},
-      async () => {
+      async (stream) => {
+        await stream.toArray();
         await setTimeout(500);
         rowsResolvedAt.push(performance.now());
       },
