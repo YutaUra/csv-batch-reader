@@ -1,5 +1,11 @@
 # @yutaura/csv-batch-reader
 
+## 1.2.0
+
+### Minor Changes
+
+- 047a139: stream output
+
 ## 1.1.0
 
 ### Minor Changes
