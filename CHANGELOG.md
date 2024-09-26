@@ -1,5 +1,13 @@
 # @yutaura/csv-batch-reader
 
+## 1.2.1
+
+### Patch Changes
+
+- fd6392d: Pin YutaUra/renovate-changeset-action action to 3e29678
+- 9ac3043: Update actions/setup-node digest to 0a44ba7
+- 0142234: Update all non-major dependencies
+
 ## 1.2.0
 
 ### Minor Changes
