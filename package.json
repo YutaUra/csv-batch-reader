@@ -13,14 +13,8 @@
   "types": "dist/index.d.ts",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
-  "files": [
-    "dist",
-    "src",
-    "README.md"
-  ],
-  "keywords": [
-    "csv"
-  ],
+  "files": ["dist", "src", "README.md"],
+  "keywords": ["csv"],
   "author": "YutaUra",
   "license": "MIT",
   "packageManager": "pnpm@9.12.1",
