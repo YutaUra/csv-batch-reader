@@ -17,7 +17,7 @@
   "keywords": ["csv"],
   "author": "YutaUra",
   "license": "MIT",
-  "packageManager": "pnpm@9.14.3",
+  "packageManager": "pnpm@9.14.4",
   "dependencies": {
     "papaparse": "5.4.1"
   },
@@ -29,6 +29,6 @@
     "@types/papaparse": "5.3.15",
     "tsup": "8.3.5",
     "typescript": "5.7.2",
-    "vitest": "2.1.6"
+    "vitest": "2.1.8"
   }
 }
