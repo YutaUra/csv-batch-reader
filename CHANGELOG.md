@@ -1,5 +1,11 @@
 # @yutaura/csv-batch-reader
 
+## 1.2.9
+
+### Patch Changes
+
+- ff2aef6: chore(deps): update all non-major dependencies
+
 ## 1.2.8
 
 ### Patch Changes
