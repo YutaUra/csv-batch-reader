@@ -1,5 +1,11 @@
 # @yutaura/csv-batch-reader
 
+## 1.2.12
+
+### Patch Changes
+
+- dc47e2d: fix(deps): update all non-major dependencies
+
 ## 1.2.11
 
 ### Patch Changes
