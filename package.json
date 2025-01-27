@@ -25,7 +25,7 @@
     "@biomejs/biome": "1.9.4",
     "@changesets/cli": "2.27.11",
     "@tsconfig/strictest": "2.0.5",
-    "@types/node": "22.10.7",
+    "@types/node": "22.10.10",
     "@types/papaparse": "5.3.15",
     "tsup": "8.3.5",
     "typescript": "5.7.3",
