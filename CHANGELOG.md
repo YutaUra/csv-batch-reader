@@ -1,5 +1,11 @@
 # @yutaura/csv-batch-reader
 
+## 1.2.14
+
+### Patch Changes
+
+- 0fcfa20: fix(deps): update all non-major dependencies
+
 ## 1.2.13
 
 ### Patch Changes
