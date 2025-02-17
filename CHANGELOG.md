@@ -1,5 +1,12 @@
 # @yutaura/csv-batch-reader
 
+## 1.2.16
+
+### Patch Changes
+
+- e5a012d: chore(deps): update dependency @types/node to v22.13.4
+- 4e471c6: chore(deps): update pnpm to v10
+
 ## 1.2.15
 
 ### Patch Changes
