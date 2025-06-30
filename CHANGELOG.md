@@ -1,5 +1,11 @@
 # @yutaura/csv-batch-reader
 
+## 1.2.22
+
+### Patch Changes
+
+- b1cc4a9: chore(deps): update pnpm to v10.12.4
+
 ## 1.2.21
 
 ### Patch Changes
