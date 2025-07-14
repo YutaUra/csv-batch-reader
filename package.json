@@ -1,6 +1,6 @@
 {
   "name": "@yutaura/csv-batch-reader",
-  "version": "1.2.23",
+  "version": "1.2.24",
   "publishConfig": {
     "access": "public"
   },
@@ -13,8 +13,14 @@
   "types": "dist/index.d.ts",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
-  "files": ["dist", "src", "README.md"],
-  "keywords": ["csv"],
+  "files": [
+    "dist",
+    "src",
+    "README.md"
+  ],
+  "keywords": [
+    "csv"
+  ],
   "author": "YutaUra",
   "license": "MIT",
   "packageManager": "pnpm@10.13.1",
