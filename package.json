@@ -17,7 +17,7 @@
   "keywords": ["csv"],
   "author": "YutaUra",
   "license": "MIT",
-  "packageManager": "pnpm@10.12.4",
+  "packageManager": "pnpm@10.13.1",
   "dependencies": {
     "papaparse": "5.5.3"
   },
@@ -25,7 +25,7 @@
     "@biomejs/biome": "1.9.4",
     "@changesets/cli": "2.29.5",
     "@tsconfig/strictest": "2.0.5",
-    "@types/node": "22.16.0",
+    "@types/node": "22.16.3",
     "@types/papaparse": "5.3.16",
     "tsup": "8.5.0",
     "typescript": "5.8.3",
