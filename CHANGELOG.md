@@ -1,5 +1,11 @@
 # @yutaura/csv-batch-reader
 
+## 1.2.45
+
+### Patch Changes
+
+- dd79f61: chore(deps): update all non-major dependencies
+
 ## 1.2.44
 
 ### Patch Changes
