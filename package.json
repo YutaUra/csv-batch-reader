@@ -6,15 +6,21 @@
   },
   "scripts": {
     "build": "tsup",
-    "check": "tsc --noEmit && biome check --fix",
+    "check": "tsc --noEmit && biome check --write",
     "test": "vitest run",
     "publish-packages": "pnpm run build && changeset version && changeset publish"
   },
   "types": "dist/index.d.ts",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
-  "files": ["dist", "src", "README.md"],
-  "keywords": ["csv"],
+  "files": [
+    "dist",
+    "src",
+    "README.md"
+  ],
+  "keywords": [
+    "csv"
+  ],
   "author": "YutaUra",
   "license": "MIT",
   "packageManager": "pnpm@10.30.1",
