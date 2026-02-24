@@ -1,5 +1,11 @@
 # @yutaura/csv-batch-reader
 
+## 1.2.53
+
+### Patch Changes
+
+- 11f3669: chore(deps): update dependency vitest to v4
+
 ## 1.2.52
 
 ### Patch Changes
