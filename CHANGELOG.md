@@ -1,5 +1,11 @@
 # @yutaura/csv-batch-reader
 
+## 1.2.54
+
+### Patch Changes
+
+- 9f51919: chore(deps): update node.js to v24
+
 ## 1.2.53
 
 ### Patch Changes
