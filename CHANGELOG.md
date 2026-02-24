@@ -1,5 +1,11 @@
 # @yutaura/csv-batch-reader
 
+## 1.2.55
+
+### Patch Changes
+
+- 841fa37: chore(deps): update dependency @biomejs/biome to v2
+
 ## 1.2.54
 
 ### Patch Changes
