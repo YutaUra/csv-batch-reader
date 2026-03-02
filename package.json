@@ -23,7 +23,7 @@
   ],
   "author": "YutaUra",
   "license": "MIT",
-  "packageManager": "pnpm@10.30.1",
+  "packageManager": "pnpm@10.30.3",
   "dependencies": {
     "papaparse": "5.5.3"
   },
@@ -31,7 +31,7 @@
     "@biomejs/biome": "2.4.4",
     "@changesets/cli": "2.29.8",
     "@tsconfig/strictest": "2.0.8",
-    "@types/node": "24.10.13",
+    "@types/node": "24.10.15",
     "@types/papaparse": "5.5.2",
     "tsup": "8.5.1",
     "typescript": "5.9.3",
