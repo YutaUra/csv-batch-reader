@@ -16,7 +16,7 @@ jobs:
   check-pr:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/create-github-app-token@1b10c78c7865c340bc4f6099eb2f838309f1e8c3 # v3.1.1
+      - uses: actions/create-github-app-token@bcd2ba49218906704ab6c1aa796996da409d3eb1 # v3.2.0
         id: app-token
         with:
           app-id: ${{ secrets.BOT_APP_ID }}
@@ -33,7 +33,7 @@ jobs:
       - run: pnpm run check
       - run: pnpm run test
 
-      - uses: int128/update-generated-files-action@03546ede83dedaefaed68cb5f79d08e14107af1c # v2.93.0
+      - uses: int128/update-generated-files-action@37687f06025a7a9460fd579d2c078804cf224012 # v2.95.0
         if: always()
         with:
           token: ${{ steps.app-token.outputs.token }}
