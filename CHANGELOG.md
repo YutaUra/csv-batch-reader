@@ -1,5 +1,11 @@
 # @yutaura/csv-batch-reader
 
+## 1.2.70
+
+### Patch Changes
+
+- 17cf073: Update all non-major dependencies
+
 ## 1.2.69
 
 ### Patch Changes
