@@ -1,5 +1,11 @@
 # @yutaura/csv-batch-reader
 
+## 1.2.74
+
+### Patch Changes
+
+- 127842b: Lock file maintenance
+
 ## 1.2.73
 
 ### Patch Changes
