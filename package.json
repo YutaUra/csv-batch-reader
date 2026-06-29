@@ -23,7 +23,7 @@
   ],
   "author": "YutaUra",
   "license": "MIT",
-  "packageManager": "pnpm@10.34.4",
+  "packageManager": "pnpm@11.9.0",
   "dependencies": {
     "papaparse": "5.5.4"
   },
