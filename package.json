@@ -25,10 +25,10 @@
   "license": "MIT",
   "packageManager": "pnpm@10.34.4",
   "dependencies": {
-    "papaparse": "5.5.3"
+    "papaparse": "5.5.4"
   },
   "devDependencies": {
-    "@biomejs/biome": "2.5.0",
+    "@biomejs/biome": "2.5.1",
     "@changesets/cli": "2.31.0",
     "@tsconfig/strictest": "2.0.8",
     "@types/node": "24.13.2",
