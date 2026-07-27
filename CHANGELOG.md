@@ -1,5 +1,11 @@
 # @yutaura/csv-batch-reader
 
+## 1.2.78
+
+### Patch Changes
+
+- 7af0c82: Update all non-major npm dependencies
+
 ## 1.2.77
 
 ### Patch Changes
