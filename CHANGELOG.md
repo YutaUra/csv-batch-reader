@@ -1,5 +1,11 @@
 # @yutaura/csv-batch-reader
 
+## 1.2.80
+
+### Patch Changes
+
+- eb2c78a: Update dependency @biomejs/biome to v2.5.7
+
 ## 1.2.79
 
 ### Patch Changes
