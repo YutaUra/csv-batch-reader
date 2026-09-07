@@ -1,6 +1,6 @@
 {
   "name": "@yutaura/csv-batch-reader",
-  "version": "1.2.83",
+  "version": "1.2.84",
   "publishConfig": {
     "access": "public"
   },
