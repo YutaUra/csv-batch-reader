@@ -1,5 +1,11 @@
 # @yutaura/csv-batch-reader
 
+## 1.2.87
+
+### Patch Changes
+
+- 80a8cd7: Update dependency @types/node to v24.13.6
+
 ## 1.2.86
 
 ### Patch Changes
