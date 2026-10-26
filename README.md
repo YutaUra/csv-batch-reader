@@ -5,11 +5,10 @@
 This is a library for reading CSV files in batch.
 
 ```typescript
-import { csvBatchRead } from '@yutaura/csv-batch-reader';
-
+import { csvBatchRead } from "@yutaura/csv-batch-reader";
 
 await csvBatchRead(
-  'path/to/csv-file.csv',
+  "path/to/csv-file.csv",
   100, // batch size
   async (headers) => {
     // do something with headers
