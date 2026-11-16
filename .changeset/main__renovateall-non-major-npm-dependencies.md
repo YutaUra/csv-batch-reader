@@ -2,4 +2,4 @@
 
 ## "@yutaura/csv-batch-reader": patch
 
-Update dependency @biomejs/biome to v2.6.5
+Update all non-major npm dependencies
