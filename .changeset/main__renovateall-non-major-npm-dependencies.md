@@ -1,5 +1,5 @@
 ---
-"@yutaura/csv-batch-reader": patch
----
+
+## "@yutaura/csv-batch-reader": patch
 
 Update all non-major npm dependencies
