@@ -28,7 +28,7 @@
     "papaparse": "5.7.1"
   },
   "devDependencies": {
-    "@biomejs/biome": "2.6.7",
+    "@biomejs/biome": "2.6.8",
     "@changesets/cli": "2.31.1",
     "@tsconfig/strictest": "2.0.9",
     "@types/node": "24.19.2",
